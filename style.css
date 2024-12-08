@@ -113,6 +113,7 @@ body {
     opacity: 0;
     animation: fadeInSection 2s ease-out forwards;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    margin: 30px;
   }
  
   .timeline-item h2 {
@@ -126,7 +127,7 @@ body {
   }
  
   .timeline-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     color: white;
     border-left: 5px solid #ff8c00; /* Brighter orange on hover */
   }

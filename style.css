@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: white;
+    overflow-x: hidden;
+  }
+ 
+  /* Header Section */
+  header {
+    position: relative;
+    background: linear-gradient(18deg, #fb5400, #897d7a, #000000); /* Added orange tones */
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: waveAnimation 8s ease-in-out infinite;
+  }
+ 
+  /* Title Animation */
+  h1 {
+    font-size: 60px;
+    color: rgb(13, 13, 13);
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: slideInText 2s ease-out;
+  }
+ 
+  h1 span {
+    display: inline-block;
+    opacity: 0;
+    animation: glowText 1s ease-out infinite alternate;
+  }
+ 
+  .typing {
+    font-size: 24px;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInText 3s forwards;
+    animation-delay: 1s;
+  }
+ 
+  /* Header Wave Animation */
+  @keyframes waveAnimation {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+ 
+  /* Sliding in Animation for the Header Text */
+  @keyframes slideInText {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+ 
+  /* Glowing Text Animation */
+  @keyframes glowText {
+    0% {
+      text-shadow: 0 0 10px #ff6600, 0 0 20px #ff5c33, 0 0 30px #ff8c00;
+    }
+    100% {
+      text-shadow: 0 0 20px #ff8c00, 0 0 30px #ff6600, 0 0 50px #ff5c33;
+    }
+  }
+ 
+  /* Fade In Animation for Typing Effect */
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+ 
+  /* Timeline Section */
+  #timeline {
+    padding: 50px 0;
+    background: #333;
+    opacity: 0;
+    animation: fadeInSection 2s ease-out forwards;
+  }
+ 
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: slideUp 2s ease-out forwards;
+  }
+ 
+  .timeline-item {
+    background-color: #444;
+    padding: 50px;
+    border-left: 5px solid #ff6600; /* Added orange color to border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+    opacity: 0;
+    animation: fadeInSection 2s ease-out forwards;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+ 
+  .timeline-item h2 {
+    font-size: 24px;
+    color: #d17f49; /* Orange color for heading */
+  }
+ 
+  .timeline-item p {
+    font-size: 16px;
+    color: #ddd;
+  }
+ 
+  .timeline-item:hover {
+    transform: scale(1.05);
+    color: white;
+    border-left: 5px solid #ff8c00; /* Brighter orange on hover */
+  }
+ 
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+ 
+  /* Section Fade In Animation */
+  @keyframes fadeInSection {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+ 
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
